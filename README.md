@@ -1,12 +1,8 @@
 # ROCK-PAPER-SCISSORS
 Creating an interactive version of the game Rock Paper Scissors
 
-
 ### Learning Resources
 
-```
-
-```
 [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors/)
 
 ## Built With
@@ -16,6 +12,9 @@ Creating an interactive version of the game Rock Paper Scissors
 * JAVASCRIPT
 
 ## What I Learned 
+```
+
+```
 
 ## Authors
 * Darrielle Evans
