@@ -1,7 +1,8 @@
 # ROCK-PAPER-SCISSORS
 Creating an interactive version of the game Rock Paper Scissors
+[Live Demo]()
 
-### Learning Resources
+## Learning Resources
 
 [The Odin Project](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors/)
 
@@ -22,7 +23,7 @@ Creating an interactive version of the game Rock Paper Scissors
 
 ## Acknowledgments
 * The Odin Project
-* 
+
 
 
 
