@@ -4,20 +4,20 @@
 let computerSelection = function computerPlay(){
     choice = ["rock", "paper","scissors"];
     let randChoice = choice[Math.floor(Math.random() * choice.length)];
-    console.log("Choices: ", choice); 
+    //console.log("Choices: ", choice); 
     return randChoice;
 }
 
-console.log("computer: ",computerSelection());
+//console.log("computer: ",computerSelection());
 
 //prompt user to enter choice
-let input = prompt("Enter: Rock, Paper, or Scissors");
-console.log("User: ",input);
+//let input = prompt("Enter: Rock, Paper, or Scissors");
+//console.log("User: ",input);
+let input;
 
 //function should take in two parameters(userinput,computerplay's return value)
 //function should compare values to determine winner
-function playGame(player, computer){
-    console.log(player, computer);
+function playRound(player, computer){
     if (player === computer){
         console.log("It's a tie");
     }
@@ -34,7 +34,18 @@ function playGame(player, computer){
          }
 
 }
-playGame(input, computerSelection());
+
+//function calls the playRound function to determine winner
+function game(){
+    input = prompt("Enter: Rock, Paper, or Scissors");
+   playRound(input, computerSelection());
+}
+
+//loops through program 5 times to play five rounds of the game
+for (let i = 0; i < 5; i++){
+game();
+
+}
 
 
 
