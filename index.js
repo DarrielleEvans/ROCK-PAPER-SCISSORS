@@ -12,7 +12,7 @@ console.log("computer: ",computerSelection());
 
 //prompt user to enter choice
 let input = prompt("Enter: Rock, Paper, or Scissors");
-console.log(input);
+console.log("User: ",input);
 
 //function should take in two parameters(userinput,computerplay's return value)
 //function should compare values to determine winner
@@ -21,18 +21,20 @@ function playGame(player, computer){
     if (player === computer){
         console.log("It's a tie");
     }
-    else if (player === 'rock' && computer === 'papers'){
-        console.log('You Lose! Paper beats rock.');
+    else if ((player === 'rock' && computer === 'papers') || 
+        (player === 'scissors' && computer === 'rock') ||
+        (player === 'paper' && computer === 'scissors')){
+        console.log('You Lose!');
     }
-    else if (player === 'scissors' && computer === 'paper'){
-        console.log('You won! Scissors beats paper');
-    }
-    else if (player === 'paper' && computer === 'rock'){
-        console.log("You won! Paper beats rock");
-    }
+    else if ((player === 'scissors' && computer === 'paper') ||
+         (player === 'paper' && computer === 'rock') || 
+         (player === 'rock' && computer === 'scissors'))
+         {
+        console.log('You won!');
+         }
 
 }
-playGame(input, computerSelection() );
+playGame(input, computerSelection());
 
 
 
