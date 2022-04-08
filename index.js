@@ -37,7 +37,7 @@ function playRound(player, computer){
 
 //function calls the playRound function to determine winner
 function game(){
-    input = prompt("Enter: Rock, Paper, or Scissors");
+   // input = prompt("Enter: Rock, Paper, or Scissors");
    playRound(input, computerSelection());
 }
 
