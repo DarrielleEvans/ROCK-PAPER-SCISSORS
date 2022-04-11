@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="index.css">
-    <script src="/index.js"></script>
+    <script src="/index.js" defer></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -17,9 +17,18 @@
             <h1 class="display-1 text-center text-uppercase">Rock Paper Scissors<br><small>choose your defense</small></h1>
             <div class="row"></div>
             <div class="col-lg-12 imagesBox">
-                <img src = "images/rock.png">
-                <img src = "images/paper.png">
-                <img src = "images/scissors.png">
+                <button id='rock'><img src = "images/rock.png" style="border:5px solid black"></button>
+                <button id='paper'><img id ='rock' src = "images/paper.png" style="border:5px solid black"></button>
+                <button id ='scissors'><img src = "images/scissors.png" style="border:5px solid black"></button>
+            </div>
+            <div class = "score text-center"><h2>Score</h2></div>
+            <div class = "results">
+                <div id = 'player' class="result"> Player:</div> 
+                <div id = 'comp' class="result">Computer:</div>
+            </div>
+            <div class = "showSelection">
+                <div id = "showPlayer"></div>
+                <div id = "showComp"></div>
             </div>
         </div>
     </div> 

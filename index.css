@@ -21,9 +21,34 @@ body,html{
   }
 
   .imagesBox{
-    text-align:center;
+    text-align: center;
+    padding-top: 20px;
   }
 
-  img{
-    border: 10px solid black;
+  /*img:hover {
+    box-shadow: 0 0 5px 1px rgba(65, 67, 68, 0.5);  
+}*/
+  .results{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-around;
+      font-size: 30px;
+      font-weight: bold;
   }
+
+  .showSelection{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+  }
+button:hover{
+   background-color: transparent;
+}
+button{
+    border: none;
+    background-color: transparent;
+}
+
+
