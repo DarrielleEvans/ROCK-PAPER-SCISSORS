@@ -14,6 +14,10 @@ Creating an interactive version of the game Rock Paper Scissors
 
 ## What I Learned 
 ```
+- How to work from multiple branches and merge the code
+- How to use DOM manipulation
+-How to use Events for buttons
+- How to hide div and show divs based on features
 
 ```
 
@@ -23,6 +27,9 @@ Creating an interactive version of the game Rock Paper Scissors
 
 ## Acknowledgments
 * The Odin Project
+* Rock - Paper - Scissors Pictures from: https://icons8.com/icons/set/rock-paper-scissor
+* Picture of Fans Cheering from : https://www.seekapor.com/dont-cheer-from-the-wrong-crowd/
+
 
 
 
