@@ -25,7 +25,7 @@ Creating an interactive version of the game Rock Paper Scissors
 
 ## Authors
 * Darrielle Evans
-* [Portfolio](//www.darrielleevans.com/)
+* [Portfolio](https://darrielleevans.com)
 
 ## Acknowledgments
 * The Odin Project
