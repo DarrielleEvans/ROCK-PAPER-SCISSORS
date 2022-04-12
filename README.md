@@ -11,7 +11,7 @@ Creating an interactive version of the game Rock Paper Scissors
 * HTML
 * CSS
 * JAVASCRIPT
-* Bootstrap
+* BOOTSRAP
 
 ## What I Learned 
 ```
