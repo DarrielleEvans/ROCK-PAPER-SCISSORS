@@ -21,11 +21,10 @@ let choice = " ";
 let computerSelection = function computerPlay(){
     let compChoice = ["rock", "paper","scissors"];
     let randChoice = compChoice[Math.floor(Math.random() * compChoice.length)];
-    //console.log("Choices: ", choice); 
     return randChoice;
   
 }
-//showComp.textContent = ("computer: ",computerSelection());
+
 
 
 rock.addEventListener('click', ()=>{
@@ -64,8 +63,6 @@ function playRound(player, computer){
         (player === 'scissors' && computer === 'rock') ||
         (player === 'paper' && computer === 'scissors')){
         console.log('You Lose!');
-       // compTotal = compTotal + 1;
-        //compResult.innerText = "Computer: " + compTotal;
         message =  "loser";
         
     }
@@ -131,20 +128,16 @@ function checkResults(playerMessage, compMessage){
     }
 }
 function showResetButton(){
-   // let selectionDiv = document.getElementById('imageBox');
-    //let playAgain = document.getElementById('resetButton');
     playAgain.style.display = 'flex';
     selectionDiv.style.display = 'none';
-    //playAgain.classList.add('resetButton');
+   
 }
 
 function resetGame(){
-   let showSelection = document.getElementById('showMe');
     playAgain.style.display = 'none';
     selectionDiv.style.display = 'block';
     playerTotal = 0;
     compTotal = 0;
-    //finalResult.style.display = 'none';
     finalResult.innerText = '';
     playerResult.innerText = "Player: " + playerTotal;
     compResult.innerText = "Computer: " + compTotal;
@@ -153,8 +146,7 @@ function resetGame(){
     showMessage.innerText = '';
     showMessage.style.display = 'flex';
     
-   // console.log("hey: ",showMessage);
-    //showMe.style.display = 'none';
+
 
 
 }
