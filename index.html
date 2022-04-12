@@ -15,20 +15,26 @@
     <div class="bg">
         <div class="container">
             <h1 class="display-1 text-center text-uppercase">Rock Paper Scissors<br><small>choose your defense</small></h1>
-            <div class="row"></div>
-            <div class="col-lg-12 imagesBox">
-                <button id='rock'><img src = "images/rock.png" style="border:5px solid black"></button>
-                <button id='paper'><img id ='rock' src = "images/paper.png" style="border:5px solid black"></button>
-                <button id ='scissors'><img src = "images/scissors.png" style="border:5px solid black"></button>
-            </div>
-            <div class = "score text-center"><h2>Score</h2></div>
-            <div class = "results">
-                <div id = 'player' class="result"> Player:</div> 
-                <div id = 'comp' class="result">Computer:</div>
-            </div>
-            <div class = "showSelection">
-                <div id = "showPlayer"></div>
-                <div id = "showComp"></div>
+            <div class="row">
+                <div class = "col-lg-12 ">
+                    <div id = "resetButton"><button id = "resetGame" class = "playAgain">Play Again</button></div>
+                    <div class = "imagesBox" id="imageBox">
+                        <button id='rock'><img src = "images/rock.png" style="border:5px solid black"></button>
+                        <button id='paper'><img id ='rock' src = "images/paper.png" style="border:5px solid black"></button>
+                        <button id ='scissors'><img src = "images/scissors.png" style="border:5px solid black"></button>
+                    </div>
+                </div>
+                <div class = "score text-center"><h2>Score</h2></div>
+                <div class = "results">
+                    <div id = 'player' class="result"> Player:</div> 
+                    <div id = 'comp' class="result">Computer:</div>
+                </div>
+                <div id = "showMe" class = "showSelection">
+                    <div id = "showPlayer"></div>
+                    <div id = "showComp"></div>
+                </div>
+                <div id = "showMessage" class = messageShow ></div>
+                <div id = "finalResult" ></div>
             </div>
         </div>
     </div> 

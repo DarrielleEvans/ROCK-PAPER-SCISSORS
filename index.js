@@ -7,48 +7,60 @@ let playerResult = document.getElementById('player');
 let compResult = document.getElementById('comp');
 let showPlayer = document.getElementById('showPlayer');
 let showComp = document.getElementById('showComp');
+let showMessage = document.getElementById('showMessage');
+let playAgain = document.getElementById('resetButton');
+let selectionDiv = document.getElementById('imageBox');
+
 let playerTotal = 0;
 let compTotal = 0;
+let choice = " ";
 
 
 
 //this function will randomly return rock, paper, or scissors
 let computerSelection = function computerPlay(){
-    choice = ["rock", "paper","scissors"];
-    let randChoice = choice[Math.floor(Math.random() * choice.length)];
+    let compChoice = ["rock", "paper","scissors"];
+    let randChoice = compChoice[Math.floor(Math.random() * compChoice.length)];
     //console.log("Choices: ", choice); 
     return randChoice;
+  
 }
 //showComp.textContent = ("computer: ",computerSelection());
 
 
 rock.addEventListener('click', ()=>{
-    let choice = 'rock';
+    choice = 'rock';
     game(choice);
 });
 
 paper.addEventListener('click', ()=>{
-    let choice = 'paper';
+    choice = 'paper';
     game(choice);
 });
 
 scissors.addEventListener('click', ()=>{
-    let choice = 'scissors';
+    choice = 'scissors';
     game(choice);
 });
+
+playAgain.addEventListener('click', resetGame);
 
 
 //function should take in two parameters(userinput,computerplay's return value)
 //function should compare values to determine winner
 function playRound(player, computer){
     let message;
+    showComp.textContent = computer;
+    showPlayer.textContent = player;
+    console.log("player: ", player);
+    console.log("computer ", computer);
 
     if (player === computer){
         console.log("It's a tie");
         message = "tie";
 
     }
-    if ((player === 'rock' && computer === 'papers') || 
+    else if ((player === 'rock' && computer === 'paper') || 
         (player === 'scissors' && computer === 'rock') ||
         (player === 'paper' && computer === 'scissors')){
         console.log('You Lose!');
@@ -57,7 +69,7 @@ function playRound(player, computer){
         message =  "loser";
         
     }
-    if ((player === 'scissors' && computer === 'paper') ||
+    else if ((player === 'scissors' && computer === 'paper') ||
         (player === 'paper' && computer === 'rock') || 
         (player === 'rock' && computer === 'scissors'))
         {
@@ -65,65 +77,87 @@ function playRound(player, computer){
         message =  "winner";
         }
         return message;
-        /*playerTotal = playerTotal + 1;
-        console.log(playerTotal);
-        
-        }
-        playerResult.innerText = "Player: " + playerTotal; */
+       
         
 }
 
-//let scoreBoard1;
 
 //function calls the playRound function to determine winner
 function game(choice){
-   
+
    let roundWinner = playRound(choice, computerSelection());
    console.log("roundWinner: ", roundWinner);
-
+    
    if(roundWinner === "winner"){
        playerTotal = playerTotal + 1;
        playerResult.innerText = "Player: " + playerTotal;
+       showMessage.innerText = "YOU WIN!";
    }
    else if(roundWinner === "loser"){
        compTotal = compTotal + 1;
        compResult.innerText = "Computer: " + compTotal;
+       showMessage.innerText = "YOU LOSE!";
    }
-   showComp.textContent = computerSelection();
-   showPlayer.textContent = choice;
+   else if (roundWinner === "tie"){
+    showMessage.innerText = "TIE!";
+   }
    
+   //check score
+   checkResults(playerTotal,compTotal);
+
+
 }
- 
- 
-/*console.log(scoreBoard1);
 
-function totals(scoreBoard1){
-    console.log(scoreBoard1);
- 
-    if (scoreBoard1 === "winner"){
-        playerTotal = playerTotal + 1;
-        console.log("player t", playerTotal);
-
+//checks to see who reaches five points first
+function checkResults(playerMessage, compMessage){
+    let finalResult = document.getElementById('finalResult');
+    if(playerMessage === 5){
+        showMessage.style.display = "none";
+        finalResult.classList.add('finalMessage');
+        const newText = document.createElement('P');
+        const newMessage = document.createTextNode("You Won the Game");
+        finalResult.appendChild(newMessage);
+        showResetButton();
+            
     }
-    if (scoreBoard1 === "loser"){
-        compTotal = compTotal + 1;
-        console.log("computer t:", compTotal);
+    else if(compMessage === 5){
+        showMessage.style.display = "none";
+        finalResult.classList.add('finalMessage');
+        const newText = document.createElement('P');
+        const newMessage = document.createTextNode("You Lost the Game");
+        finalResult.appendChild(newMessage);
+        showResetButton();
         
     }
-   
-}*/
+}
+function showResetButton(){
+   // let selectionDiv = document.getElementById('imageBox');
+    //let playAgain = document.getElementById('resetButton');
+    playAgain.style.display = 'flex';
+    selectionDiv.style.display = 'none';
+    //playAgain.classList.add('resetButton');
+}
+
+function resetGame(){
+   let showSelection = document.getElementById('showMe');
+    playAgain.style.display = 'none';
+    selectionDiv.style.display = 'block';
+    playerTotal = 0;
+    compTotal = 0;
+    //finalResult.style.display = 'none';
+    finalResult.innerText = '';
+    playerResult.innerText = "Player: " + playerTotal;
+    compResult.innerText = "Computer: " + compTotal;
+    showPlayer.textContent = '';
+    showComp.textContent = '';
+    showMessage.innerText = '';
+    showMessage.style.display = 'flex';
+    
+   // console.log("hey: ",showMessage);
+    //showMe.style.display = 'none';
 
 
-
-
-
-
-//game();
-/*loops through program 5 times to play five rounds of the game
-for (let i = 0; i < 5; i++){
-game();
-
-}*/
+}
 
 
 
