@@ -16,7 +16,7 @@ Creating an interactive version of the game Rock Paper Scissors
 ```
 - How to work from multiple branches and merge the code
 - How to use DOM manipulation
--How to use Events for buttons
+- How to use Events for buttons
 - How to hide div and show divs based on features
 
 ```
